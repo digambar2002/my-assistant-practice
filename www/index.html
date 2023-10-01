@@ -1,7 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
 <!-- Comment added -->
+
 <head>
+    <link rel="shortcut icon" href="assets/img/logo.ico" type="image/x-icon">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Jarvis</title>
@@ -25,55 +27,74 @@
 </head>
 
 <body>
+    <div class="container">
 
-    <section id="Oval" class="mb-4">
-        <div class="row">
-            <div class="col-md-1"></div>
-            <div class="col-md-10">
-                <div class="d-flex justify-content-center align-items-center" style="height: 80vh;">
-                    <!-- <div style="height: -2; width: 160px;">
-                    </div> -->
+        <!-- Jarvis Blob -->
+        <section id="Oval" class="mb-4">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="d-flex justify-content-center align-items-center" style="height: 80vh;">
+                        <!-- <div style="height: -2; width: 160px;">
+                        </div> -->
 
-                    <canvas id="canvasOne" width="700" height="420" style="position: absolute;"></canvas>
-                    <!-- <div width="700" height="420" class="heading" style="position: absolute;">J.A.R.V.I.S</div> -->
-                    <section id="JarvisHood" class="CenterSection">
-                        <div class="square">
-                            <span class="circle"></span>
-                            <span class="circle"></span>
-                            <span class="circle"></span>
+                        <canvas id="canvasOne" width="700" height="420" style="position: absolute;"></canvas>
+                        <!-- <div width="700" height="420" class="heading" style="position: absolute;">J.A.R.V.I.S</div> -->
+                        <section id="JarvisHood" class="CenterSection">
+                            <div class="square">
+                                <span class="circle"></span>
+                                <span class="circle"></span>
+                                <span class="circle"></span>
+                            </div>
+                        </section>
+                    </div>
+                    <p class="text-center text-light text custom mb-4">Ask me anything</p>
+                    
+                    <!-- input box to take commands -->
+                    <div class="col-lg-12">
+                        <div class="text-center">
+                            <div id="TextInput" class="d-flex ">
+                                <input class="input-field" type="text" name="chatbox" id="chatbox"
+                                    placeholder="type here ...">
+
+                                <button id="MicBtn" class="glow-on-hover"><i class="bi bi-mic"></i></button>
+                                <button id="SendBtn" class="glow-on-hover" hidden><i class="bi bi-send"></i></button>
+                                <button id="Chat" class="glow-on-hover" data-bs-toggle="offcanvas"
+                                    data-bs-target="#offcanvasScrolling" aria-controls="offcanvasScrolling"><i
+                                        class="bi bi-chat-dots"></i></button>
+                                <button id="SettingsBtn" class="glow-on-hover" data-bs-toggle="modal"
+                                    data-bs-target="#exampleModal"><i class="bi bi-gear"></i></button>
+                            </div>
                         </div>
-                    </section>
-                </div>
-                <p class="text-center text-light text custom mb-4">Ask me anything</p>
-
-                <div class="col-lg-12">
-                    <div class="text-center">
-                        <div id="TextInput" class="d-flex ">
-
-                            <input class="input-field" type="text" name="chatbox" id="chatbox"
-                                placeholder="type here ...">
-
-                            <button id="MicBtn" class="glow-on-hover"><i class="bi bi-mic"></i></button>
-                            <button id="SendBtn" class="glow-on-hover" hidden><i class="bi bi-send"></i></button>
-                            <button id="Chat" class="glow-on-hover" data-bs-toggle="offcanvas"
-                                data-bs-target="#offcanvasScrolling" aria-controls="offcanvasScrolling"><i
-                                    class="bi bi-chat-dots"></i></button>
-                            <button id="SettingsBtn" class="glow-on-hover" data-bs-toggle="modal"
-                                data-bs-target="#exampleModal"><i class="bi bi-gear"></i></button>
-
-                        </div>
-
                     </div>
 
                 </div>
-
             </div>
-            <div class="col-md-1"></div>
-        </div>
-    </section>
+        </section>
+
+        <section id="Siriwave" class="mb-4">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="d-flex justify-content-start align-items-center" style="height: 100vh;">
+                            <div class="">
+                                <p class="text-start text-light text custom mb-4 siri-message">Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus impedit totam mollitia blanditiis, consequuntur, earum unde ex architecto corrupti rerum dolor numquam in laborum, ad commodi quas dignissimos facilis asperiores?</p>
+                                <div id="siri-container"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+
+    </div>
 
     <!--Jquery  -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+
+    <!-- Siri wave -->
+    <script src="https://unpkg.com/siriwave/dist/siriwave.umd.min.js"></script>
 
     <!-- Bootstrap -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
@@ -90,11 +111,11 @@
     <script src="http://jschr.github.io/textillate/jquery.textillate.js"></script>
 
     <!-- Eel -->
-    <script type="text/javascript" src="eel.js"></script>
+    <!-- <script type="text/javascript" src="eel.js"></script> -->
 
     <!-- Main.js -->
     <script src="main.js"></script>
-    
+
 </body>
 
 </html>
